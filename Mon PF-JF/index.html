@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Portfolio - JF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <span class="nav-logo">JF<span class="blink">_</span></span>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="#accueil">Accueil</a>
+    <a href="#projets">Projets</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- SECTION: Accueil -->
+  <section id="accueil">
+    <div class="hero-grid">
+      <div class="hero-label">
+        <span class="tag">// Actuellement étudiant en 1er Année à l'IUT de Kourou</span>
+      </div>
+      <div class="hero-content">
+        <p class="hero-intro">Hello World, je suis</p>
+        <h1>Jonael<br /><em>Felicien</em></h1>
+        <p class="hero-desc">
+          Développeur passionné par la création d'expériences numériques élégantes et performantes.
+        </p>
+        <div class="hero-actions">
+          <a href="#projets" class="btn-primary">Voir mes projets</a>
+          <a href="#contact" class="btn-ghost">Me contacter</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Projets réalisés</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">1</span>
+          <span class="stat-label">Année d'expérience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">6</span>
+          <span class="stat-label">Technologies maîtrisées</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-bar">
+      <span>Html</span>
+      <span>Css</span>
+      <span>Python</span>
+      <span>jquery</span>
+      <span>Virtualisation</span>
+      <span>Administration de réseau</span>
+      <span>Montage Vidéo (Basique)</span>
+    </div>
+  </section>
+
+  <!-- SECTION: Projets -->
+  <section id="projets">
+    <div class="section-header" data-reveal>
+      <span class="section-tag">02 / projets</span>
+      <h2>Ce que je construis</h2>
+      <p>Projets terminés et en cours de développement</p>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Projet 1 -->
+      <article class="project-card finished">
+        <div class="card-top">
+          <div class="card-icon">🌡️</div>
+          <span class="badge badge-done">Terminé</span>
+        </div>
+        <h3>Contrôleur infrarouge RPi</h3>
+        <p>Ce programme transforme votre Raspberry Pi en un contrôleur multimédia et domotique interactif.
+          Il sert principalement à afficher des informations sur un écran et à piloter ces affichages via deux
+          méthodes d'entrée : une télécommande infrarouge (IR) ou un clavier.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>Shell</span>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-header">
+            <span>Progression</span>
+            <span>100%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" data-width="100"></div>
+          </div>
+          <span class="badge badge-ps">Projet Scolaire Année 25/26</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/JF-BUIUT/Controleur-IR-multifonction-RPi.git" class="link-icon">↗ GitHub</a>
+        </div>
+      </article>
+
+
+      <!-- Projet 2 -->
+      <article class="project-card finished">
+        <div class="card-top">
+          <div class="card-icon">🎥</div>
+          <span class="badge badge-done">Terminé</span>
+        </div>
+        <h3>JE FILME MA FORMATION (JFMF)</h3>
+        <p>A travers leurs connaissances, les 1ères années RT déjouent les plans du méchant Incognitous et 
+          mettent en avant leurs compétences techniques avec humour afin de donner envie aux futurs étudiants
+          de découvrir la filière RT (Réseaux & télécoms).</p>
+        <div class="tech-stack">
+          <span>Montage Vidéo</span>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-header">
+            <span>Progression</span>
+            <span>100%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" data-width="100"></div>
+          </div>
+        </div>
+        <span class="badge badge-ps">Projet Scolaire Année 25/26</span>
+        <div class="card-links">
+          <a href="https://www.parcoursmetiers.tv/video/19063-mission-de-protection-informatique-sur-la-fusee-ariane-6" class="link-icon">↗ Vidéo du projet</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECTION: Contact -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-tag">03 / contact</span>
+      <h2>Travaillons ensemble</h2>
+      <p>Un projet ? Une idée ? N'hésitez pas à me contacter.</p>
+    </div>
+
+    <div class="contact-layout">
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-label">// Email</span>
+          <a href="mailto:jonael.felicien@etu.univ-guyane.fr"><span>[email protected]</span></a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">// Localisation</span>
+          <span>Kourou, Guyane Française</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">// Réseaux</span>
+          <div class="social-links">
+            <a href="https://github.com/JF-BUIUT">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+
+        <!--
+          <div class="availability-badge">
+            <span class="dot"></span>
+            Disponible pour de nouveaux projets
+          </div>
+        -->
+
+        <div class="not-availability-badge">
+          <span class="not-dot"></span>
+          Pas encore disponible
+        </div>
+
+      </div>
+
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" placeholder="Votre nom" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="votre@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="sujet">Sujet</label>
+          <input type="text" id="sujet" placeholder="Objet de votre message" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Envoyer le message →</button>
+        <p class="form-success" id="formSuccess">Message envoyé avec succès ! Je vous répondrai bientôt.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="footer-logo">JF_</span>
+    <p>© 2025 Jonael Felicien. Construit avec Amour.</p>
+    <a href="#accueil" class="back-top">↑ Haut de page</a>
