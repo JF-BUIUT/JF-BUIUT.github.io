@@ -87,22 +87,42 @@ $(function () {
   });
 
   /* ------------------------------------------
-     5. Contact form submit (simulé)
+     5. Contact form submit (Envoi réel via Formspree)
   ------------------------------------------ */
   $('#contactForm').on('submit', function (e) {
-    e.preventDefault();
-    const btn = $(this).find('.btn-primary');
-    const originalText = btn.text();
+    e.preventDefault(); // Empêche le rechargement de la page
     
+    var form = $(this);
+    var btn = form.find('.btn-primary');
+    var originalText = btn.text();
+    var successMsg = $('#formSuccess');
+    
+    // Change l'état du bouton pendant l'envoi
     btn.text('Envoi en cours…').prop('disabled', true);
 
-    setTimeout(function () {
-      btn.text(originalText).prop('disabled', false);
-      $('#formSuccess').fadeIn(300);
-      $('#contactForm')[0].reset();
-      
-      setTimeout(() => $('#formSuccess').fadeOut(300), 5000);
-    }, 1500);
+    // Requête AJAX vers Formspree
+    $.ajax({
+      url: form.attr('action'),
+      method: form.attr('method'),
+      data: form.serialize(),
+      dataType: 'json',
+      success: function() {
+        // En cas de succès
+        successMsg.text("Message envoyé avec succès ! Je vous répondrai bientôt.").css('color', '#10b981').fadeIn(300);
+        form[0].reset(); // Vide le formulaire
+      },
+      error: function() {
+        // En cas d'erreur
+        successMsg.text("Oops! Il y a eu un problème lors de l'envoi.").css('color', '#ef4444').fadeIn(300);
+      },
+      complete: function() {
+        // Quoi qu'il arrive, on remet le bouton à la normale
+        btn.text(originalText).prop('disabled', false);
+        
+        // Cache le message après 5 secondes
+        setTimeout(() => successMsg.fadeOut(300), 5000);
+      }
+    });
   });
 
 });
