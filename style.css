@@ -30,11 +30,10 @@ html {
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'DM Mono', monospace;
-  line-height: 1.6;
-  overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 /* ---- Scrollbar ---- */
@@ -671,6 +670,16 @@ footer p {
   transition: color 0.2s;
 }
 .back-top:hover { color: var(--accent); }
+
+.badges, .competences, ul {
+    margin-bottom: 10px !important;
+}
+
+footer, img, svg {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    display: block;
+}
 
 /* ============================
    REVEAL ANIMATION — hors-écran seulement
