@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Portfolio - JF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="./main.js"></script>
+</head>
+
+<body>
+  <nav>
+    <span class="nav-logo">JF<span class="blink">_</span></span>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="#accueil">Accueil</a>
+    <a href="#projets">Projets</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <section id="accueil">
+    <div class="hero-grid">
+      <div class="hero-label">
+        <span class="tag">// BUT Réseaux &amp; Télécoms 2e année · Option cybersécurité · IUT de Kourou</span>
+      </div>
+      <div class="hero-content">
+        <p class="hero-intro">Hello World, je suis</p>
+        <h1>JONAËL<br /><em>FELICIEN</em></h1>
+        <p class="hero-desc">
+          Étudiant en 2e année de BUT R&amp;T, spécialisé en cybersécurité. Après un stage en téléphonie IP et des
+          projets Wi-Fi et domotique, je cherche une alternance de 24 mois (début le 24/10/2026) pour travailler
+          sur de vrais réseaux.
+        </p>
+        <div class="hero-actions">
+          <a href="#projets" class="btn-primary">Voir mes projets</a>
+          <a href="./CV.pdf" target="_blank" class="btn-ghost">Voir mon CV</a>
+          <a href="#contact" class="btn-ghost">Me contacter</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label">Projets réalisés</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">CCNA 1</span>
+          <span class="stat-label">Certification Cisco · juin 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-bar">
+      <span>TCP/IP · DNS · VPN · VLAN</span>
+      <span>Wireshark</span>
+      <span>Nmap</span>
+      <span>Python</span>
+      <span>Scapy</span>
+      <span>C</span>
+      <span>PHP · SQL</span>
+      <span>HTML · CSS · JavaScript (jQuery)</span>
+      <span>VMware · VirtualBox</span>
+      <span>Raspberry Pi · Arduino</span>
+      <span>Montage Vidéo (Basique)</span>
+    </div>
+  </section>
+
+  <section id="projets">
+    <div class="section-header" data-reveal>
+      <span class="section-tag">02 / projets</span>
+      <h2>Ce que je construis</h2>
+      <p>Projets terminés et en cours de développement</p>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card finished">
+        <div class="card-top">
+          <div class="card-icon">🌡️</div>
+          <span class="badge badge-done">Terminé</span>
+        </div>
+        <h3>Contrôleur infrarouge RPi</h3>
+        <p>Ce programme transforme votre Raspberry Pi en un contrôleur multimédia et domotique interactif.
+          Il sert principalement à afficher des informations sur un écran et à piloter ces affichages via deux
+          méthodes d'entrée : une télécommande infrarouge (IR) ou un clavier. Décodage des signaux (pigpio),
+          interface graphique (pygame), station météo (capteur DHT11) et scanner Bluetooth Low Energy.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>Shell</span>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-header">
+            <span>Progression</span>
+            <span>100%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" data-width="100"></div>
+          </div>
+          <span class="badge badge-ps">Projet Scolaire Année 25/26</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/JF-BUIUT/Controleur-IR-multifonction-RPi.git" class="link-icon">↗ Voir le projet sur GitHub</a>
+        </div>
+      </article>
+
+      <article class="project-card finished">
+        <div class="card-top">
+          <div class="card-icon">🎥</div>
+          <span class="badge badge-done">Terminé</span>
+        </div>
+        <h3>JE FILME MA FORMATION (JFMF)</h3>
+        <p>A travers leurs connaissances, les 1ères années RT déjouent les plans du méchant Incognitous et
+          mettent en avant leurs compétences techniques avec humour afin de donner envie aux futurs étudiants
+          de découvrir la filière RT (Réseaux & télécoms).</p>
+        <div class="tech-stack">
+          <span>Montage Vidéo</span>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-header">
+            <span>Progression</span>
+            <span>100%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" data-width="100"></div>
+          </div>
+        </div>
+        <span class="badge badge-ps">Projet Scolaire Année 25/26</span>
+        <div class="card-links">
+          <a href="https://www.parcoursmetiers.tv/video/19063-mission-de-protection-informatique-sur-la-fusee-ariane-6"
+            class="link-icon">↗ Vidéo du projet</a>
+        </div>
+      </article>
+
+      <article class="project-card finished">
+        <div class="card-top">
+          <div class="card-icon">🌐</div>
+          <span class="badge badge-done">Terminé</span>
+        </div>
+        <h3>BONTIPLAN</h3>
+        <p>Bontiplan est la plateforme de petites annonces
+          et de covoiturage pensée pour la Guyane. En un seul endroit, on y trouve des annonces de vente,
+          des trajets partagés, des services entre particuliers, des offres d'emploi, des locations
+          et même des objets perdus retrouvés. L'objectif est simple : donner aux Guyanais un outil local,
+          gratuit et gratuit d'accès, pour échanger entre voisins sans passer par des plateformes qui ne
+          connaissent pas le territoire.</p>
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-header">
+            <span>Progression</span>
+            <span>100%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" data-width="100"></div>
+          </div>
+          <span class="badge badge-ps">Projet Personnel</span>
+        </div>
+        <div class="card-links">
+          <a href="https://bontiplan.fr" target="_blank" class="link-icon">↗ Visiter le site</a>
+        </div>
+      </article>
+
+      <article class="project-card finished">
+        <div class="card-top">
+          <div class="card-icon">📶</div>
+          <span class="badge badge-done">Terminé</span>
+        </div>
+        <h3>Degré de couverture Wi-Fi du campus</h3>
+        <p>Relevés de signal sur une partie du campus avec Acrylic, cartographie de la couverture, repérage
+          des zones faibles et ajout de bornes dans les zones fréquentées sans couverture.</p>
+        <div class="tech-stack">
+          <span>Acrylic</span>
+          <span>Wi-Fi</span>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-header">
+            <span>Progression</span>
+            <span>100%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" data-width="100"></div>
+          </div>
+          <span class="badge badge-ps">Projet Scolaire</span>
+        </div>
+      </article>
+
+      <article class="project-card finished">
+        <div class="card-top">
+          <div class="card-icon">🛡️</div>
+          <span class="badge badge-done">Terminé</span>
+        </div>
+        <h3>Attaque Man-in-the-Middle</h3>
+        <p>Projet de groupe : développement du script de l'attaque en Python avec la bibliothèque Scapy,
+          testé dans des environnements virtualisés.</p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>Scapy</span>
+          <span>Cybersécurité</span>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-header">
+            <span>Progression</span>
+            <span>100%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" data-width="100"></div>
+          </div>
+          <span class="badge badge-ps">Projet Scolaire · Groupe</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-tag">03 / contact</span>
+      <h2>Travaillons ensemble</h2>
+      <p>Un projet ? Une idée ? N'hésitez pas à me contacter.</p>
+    </div>
+
+    <div class="contact-layout">
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-label">// Email</span>
+          <a href="mailto:jonael.felicien5@gmail.com"><span>jonael.felicien5@gmail.com</span></a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">// Localisation</span>
+          <span>Kourou, Guyane Française</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">// Réseaux</span>
+          <div class="social-links">
+            <a href="https://github.com/JF-BUIUT">GitHub</a>
+            <a href="https://www.linkedin.com/in/jonael-felicien/">LinkedIn</a>
+          </div>
+        </div>
+
+          <div class="availability-badge">
+            <span class="dot"></span>
+            Recherche une alternance · dès le 24/10/2026 · 24 mois
+          </div>
+
+      </div>
+
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/xlgwkova" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="name" placeholder="Votre nom" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="sujet">Sujet</label>
+          <input type="text" id="sujet" name="subject" placeholder="Objet de votre message" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Envoyer le message →</button>
+        <p class="form-success" id="formSuccess">Message envoyé avec succès ! Je vous répondrai bientôt.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-logo">JF_</span>
+    <p>© 2026 Jonael Felicien. Construit avec ❤️.</p>
+    <a href="#accueil" class="back-top">↑ Haut de page</a>
+  </footer>
+</body>
+</html>
